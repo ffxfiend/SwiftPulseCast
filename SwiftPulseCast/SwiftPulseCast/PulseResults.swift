@@ -10,16 +10,16 @@ import Foundation
 
 public typealias PulseCompletion<T> = ((PulseResults<T>) -> Void)
 public struct PulseResults<Value> {
-	var error : PulseNetworkError?
-	var result : Value?
+	public var error : PulseNetworkError?
+	public var result : Value?
 	
-	var succeeded : Bool {
+	public var succeeded : Bool {
 		get {
 			return self.error == nil && result != nil
 		}
 	}
 	
-	var failed : Bool {
+	public var failed : Bool {
 		get {
 			return !self.succeeded
 		}
