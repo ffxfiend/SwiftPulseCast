@@ -29,6 +29,7 @@
 		A8BC39F91EBF991800503133 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC39E81EBF991800503133 /* Validation.swift */; };
 		A8BC39FB1EBF9A4400503133 /* version.md in Sources */ = {isa = PBXBuildFile; fileRef = A8BC39FA1EBF9A4400503133 /* version.md */; };
 		A8BC39FF1EBF9D3A00503133 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC39FE1EBF9D3A00503133 /* EndPoints.swift */; };
+		A8BC3A011EBFA12900503133 /* PulseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC3A001EBFA12900503133 /* PulseLocation.swift */; };
 		A8BC3A051EBFA49E00503133 /* PulseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC3A041EBFA49E00503133 /* PulseError.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		A8BC39E81EBF991800503133 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A8BC39FA1EBF9A4400503133 /* version.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = version.md; sourceTree = "<group>"; };
 		A8BC39FE1EBF9D3A00503133 /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		A8BC3A001EBFA12900503133 /* PulseLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseLocation.swift; sourceTree = "<group>"; };
 		A8BC3A041EBFA49E00503133 /* PulseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				A8BC39851EBF978E00503133 /* SwiftPulseCast.h */,
 				A8BC39861EBF978E00503133 /* Info.plist */,
 				A8BC39FE1EBF9D3A00503133 /* EndPoints.swift */,
+				A8BC3A001EBFA12900503133 /* PulseLocation.swift */,
 				A8BC3A041EBFA49E00503133 /* PulseError.swift */,
 			);
 			path = SwiftPulseCast;
@@ -285,6 +288,7 @@
 				A8BC39F21EBF991800503133 /* ResponseSerialization.swift in Sources */,
 				A8BC39FB1EBF9A4400503133 /* version.md in Sources */,
 				A8BC39F61EBF991800503133 /* SessionManager.swift in Sources */,
+				A8BC3A011EBFA12900503133 /* PulseLocation.swift in Sources */,
 				A8BC39ED1EBF991800503133 /* NetworkReachabilityManager.swift in Sources */,
 				A8BC39F91EBF991800503133 /* Validation.swift in Sources */,
 				A8BC39F11EBF991800503133 /* Response.swift in Sources */,
