@@ -47,7 +47,7 @@ public class PulseCast {
 	- parameters:
 		- coordinates: CLLocationCoordinate2D
 	*/
-	public func almanacData(coordinates: PulseLocation, days: Int = 1, verbose: Bool = true, cultureInfo : String = "en-us", completion: @escaping PulseCompletion<Bool>) throws {
+	public func almanacData(coordinates: PulseLocation, verbose: Bool = true, days: Int = 1, cultureInfo: String = "en-us", completion: @escaping PulseCompletion<PulseData>) throws {
 		
 		guard self.subscriptionKey != nil else {
 			throw PulseError.MissingSubscriptionKeyError
