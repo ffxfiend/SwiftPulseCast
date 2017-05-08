@@ -10,4 +10,5 @@ import Foundation
 
 public enum PulseNetworkError : Error {
 	case invalidParameters
+	case InvalidResponse
 }
