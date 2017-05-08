@@ -73,6 +73,13 @@ public class PulseCast {
 			
 			print(response)
 			
+			guard let pulseResponse = response.result.value as? PulseData else {
+				completion(PulseResults(error: PulseNetworkError.InvalidResponse, result: nil))
+				return
+			}
+			
+			completion(PulseResults(error: nil, result: pulseResponse))
+			
 		}
 		
 	}
