@@ -84,5 +84,44 @@ public class PulseCast {
 		
 	}
 	
+	public func currentWeather(coordinates: PulseLocation, verbose: Bool = true, units: String = "Metric", cultureInfo: String = "en-us", ruledetails: Bool = false, metadata: Bool = false, includeqcflags: Bool = false, completion: @escaping PulseCompletion<PulseData>) throws {
+		
+		guard self.subscriptionKey != nil else {
+			throw PulseError.MissingSubscriptionKeyError
+		}
+		
+		guard let url = Endpoints.currentWeather.getURL() else {
+			throw PulseError.CoreURLError
+		}
+		
+		let params : Parameters = [
+			"locationtype": "latitudelongitude",
+			"location": coordinates.toString(),
+			"verbose": verbose ? "true" : "false",
+			"cultureInfo": cultureInfo,
+			"units": units,
+			"ruledetails": ruledetails ? "true" : "false",
+			"metadata": metadata ? "true" : "false",
+			"includeqcflags": includeqcflags ? "true" : "false"
+		]
+		
+		let headers : HTTPHeaders = [
+			"Ocp-Apim-Subscription-Key": self.subscriptionKey!
+		]
+		
+		request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: headers).validate(statusCode: 200...299).responseJSON { (response: DataResponse<Any>) in
+			
+			print(response)
+			
+			guard let pulseResponse = response.result.value as? PulseData else {
+				completion(PulseResults(error: PulseNetworkError.InvalidResponse, result: nil))
+				return
+			}
+			
+			completion(PulseResults(error: nil, result: pulseResponse))
+			
+		}
+		
+	}
 	
 }
