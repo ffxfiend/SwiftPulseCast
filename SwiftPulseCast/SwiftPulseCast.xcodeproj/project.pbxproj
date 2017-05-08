@@ -234,6 +234,7 @@
 					A8BC39811EBF978E00503133 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 98N4UG269H;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					A8BC398A1EBF978E00503133 = {
@@ -432,6 +433,8 @@
 		A8BC39971EBF978E00503133 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 98N4UG269H;
@@ -444,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.igzactly.SwiftPulseCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -451,6 +455,8 @@
 		A8BC39981EBF978E00503133 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 98N4UG269H;
@@ -470,6 +476,7 @@
 		A8BC399A1EBF978E00503133 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 98N4UG269H;
 				INFOPLIST_FILE = SwiftPulseCastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +489,7 @@
 		A8BC399B1EBF978E00503133 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 98N4UG269H;
 				INFOPLIST_FILE = SwiftPulseCastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
