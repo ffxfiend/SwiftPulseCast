@@ -8,6 +8,7 @@
 
 import Foundation
 
+public typealias PulseData = [String: Any]
 public typealias PulseCompletion<T> = ((PulseResults<T>) -> Void)
 public struct PulseResults<Value> {
 	public var error : PulseNetworkError?
