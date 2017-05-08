@@ -37,10 +37,6 @@ public class PulseCast {
 		self.subscriptionKey = subscriptionKey
 	}
 	
-	/* private init(key: String) {
-		self.subscriptionKey = key
-	} */
-	
 	/**
 	Almanac Data provides accurate sunrise and sunset times based on latitude and longitude.
 	
