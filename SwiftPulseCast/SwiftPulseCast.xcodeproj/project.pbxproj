@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8B230321EC141BB00637FCE /* PulseUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B230311EC141BB00637FCE /* PulseUnit.swift */; };
 		A8BC398C1EBF978E00503133 /* SwiftPulseCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BC39821EBF978E00503133 /* SwiftPulseCast.framework */; };
 		A8BC39911EBF978E00503133 /* SwiftPulseCastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC39901EBF978E00503133 /* SwiftPulseCastTests.swift */; };
 		A8BC39931EBF978E00503133 /* SwiftPulseCast.h in Headers */ = {isa = PBXBuildFile; fileRef = A8BC39851EBF978E00503133 /* SwiftPulseCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8B230311EC141BB00637FCE /* PulseUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseUnit.swift; sourceTree = "<group>"; };
 		A8BC39821EBF978E00503133 /* SwiftPulseCast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftPulseCast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BC39851EBF978E00503133 /* SwiftPulseCast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftPulseCast.h; sourceTree = "<group>"; };
 		A8BC39861EBF978E00503133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A8BC39D71EBF987D00503133 /* Alamofire */,
+				A8B230311EC141BB00637FCE /* PulseUnit.swift */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				A8BC39F11EBF991800503133 /* Response.swift in Sources */,
 				A8BC39EB1EBF991800503133 /* DispatchQueue+Alamofire.swift in Sources */,
 				A8BC39F71EBF991800503133 /* TaskDelegate.swift in Sources */,
+				A8B230321EC141BB00637FCE /* PulseUnit.swift in Sources */,
 				A8BC39EA1EBF991800503133 /* Alamofire.swift in Sources */,
 				A8BC39EC1EBF991800503133 /* MultipartFormData.swift in Sources */,
 				A8BC39E91EBF991800503133 /* AFError.swift in Sources */,
@@ -518,6 +522,7 @@
 				A8BC39981EBF978E00503133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8BC39991EBF978E00503133 /* Build configuration list for PBXNativeTarget "SwiftPulseCastTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				A8BC399B1EBF978E00503133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
