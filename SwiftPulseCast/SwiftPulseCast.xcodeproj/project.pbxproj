@@ -120,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A8BC39D61EBF986000503133 /* Vendor */,
+				A8B230311EC141BB00637FCE /* PulseUnit.swift */,
 				A8BC39851EBF978E00503133 /* SwiftPulseCast.h */,
 				A8BC39861EBF978E00503133 /* Info.plist */,
 				A8BC39FC1EBF9A8700503133 /* PulseCast.swift */,
@@ -144,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				A8BC39D71EBF987D00503133 /* Alamofire */,
-				A8B230311EC141BB00637FCE /* PulseUnit.swift */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
