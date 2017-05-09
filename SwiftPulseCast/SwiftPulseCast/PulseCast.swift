@@ -80,7 +80,7 @@ public class PulseCast {
 		
 	}
 	
-	public func currentWeather(coordinates: PulseLocation, verbose: Bool = true, units: String = "Metric", cultureInfo: String = "en-us", ruledetails: Bool = false, metadata: Bool = false, includeqcflags: Bool = false, completion: @escaping PulseCompletion<PulseData>) throws {
+	public func currentWeather(coordinates: PulseLocation, verbose: Bool = true, unit: PulseUnit = .metric, cultureInfo: String = "en-us", ruleDetails: Bool = false, metaData: Bool = false, includeQCFlags: Bool = false, completion: @escaping PulseCompletion<PulseData>) throws {
 		
 		guard self.subscriptionKey != nil else {
 			throw PulseError.MissingSubscriptionKeyError
