@@ -41,7 +41,11 @@ public class PulseCast {
 	Almanac Data provides accurate sunrise and sunset times based on latitude and longitude.
 	
 	- parameters:
-		- coordinates: CLLocationCoordinate2D
+		- coordinates: Location to use for querying data from the system.
+		- verbose: Determines if the feed should return parameters names as full text or abbreviations.  **Defaults to true**
+		- days: Number of days you want data for. The default is 1 meaning only the current day. The number of days includes the current day and any subsequent days in local time (max:10).  **Defaults to 1**
+		- cultureInfo: Determines in which language to return results. **Defaults to en-us**
+		- completion: Code to be called when the network request is complete.
 	*/
 	public func almanacData(coordinates: PulseLocation, verbose: Bool = true, days: Int = 1, cultureInfo: String = "en-us", completion: @escaping PulseCompletion<PulseData>) throws {
 		
@@ -80,6 +84,19 @@ public class PulseCast {
 		
 	}
 	
+	/**
+	Current condition data based on the location requested.
+	
+	- parameters:
+		- coordinates: Location to use for querying data from the system.
+		- verbose: Determines if the feed should return parameters names as full text or abbreviations. **Defaults to true**
+		- unit: Return data using Metric or English units. **Defaults to .metric**
+		- cultureInfo: Determines in which language to return results. **Defaults to en-us**
+		- ruleDetails: Determines whether or not to display explanation of rollover logic. **Defaults to false**
+		- metaData: Determines whether or not to return metadata. **Defaults to false**
+		- includeQCFlags: Provides QC value for filtered measurements. **Defaults to false**
+		- completion: Code to be called when the network request is complete.
+	*/
 	public func currentWeather(coordinates: PulseLocation, verbose: Bool = true, unit: PulseUnit = .metric, cultureInfo: String = "en-us", ruleDetails: Bool = false, metaData: Bool = false, includeQCFlags: Bool = false, completion: @escaping PulseCompletion<PulseData>) throws {
 		
 		guard self.subscriptionKey != nil else {
