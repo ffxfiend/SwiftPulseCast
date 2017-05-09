@@ -137,4 +137,55 @@ public class PulseCast {
 		
 	}
 	
+	/**
+	10 Day-Night Forecast Feed provides a descriptive day and night period forecast covering the next 10 days. 
+	The day period of the forecast is considered to be 7am-7pm local time, while the night period of the forecast 
+	is considered to be the hours straddling the date change from 7pm to 7am local time.
+	
+	The forecast will be updated twice per day by 09:30 UTC and 21:30 UTC.
+	
+	- parameters:
+		- coordinates: Location to use for querying data from the system.
+		- verbose: Determines if the feed should return parameters names as full text or abbreviations. **Defaults to true**
+		- unit: Return data using Metric or English units. **Defaults to .metric**
+		- cultureInfo: Determines in which language to return results. **Defaults to en-us**
+		- completion: Code to be called when the network request is complete.
+	*/
+	public func tenDayNightForcast(coordinates: PulseLocation, verbose: Bool = true, unit: PulseUnit = .metric, cultureInfo: String = "en-us", completion: @escaping PulseCompletion<PulseData>) throws {
+		
+		guard self.subscriptionKey != nil else {
+			throw PulseError.MissingSubscriptionKeyError
+		}
+		
+		guard let url = Endpoints.tenDayNightForcast.getURL() else {
+			throw PulseError.CoreURLError
+		}
+		
+		let params : Parameters = [
+			"locationtype": "latitudelongitude",
+			"location": coordinates.toString(),
+			"verbose": verbose ? "true" : "false",
+			"cultureInfo": cultureInfo,
+			"units": unit.rawValue
+		]
+		
+		let headers : HTTPHeaders = [
+			"Ocp-Apim-Subscription-Key": self.subscriptionKey!
+		]
+		
+		request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: headers).validate(statusCode: 200...299).responseJSON { (response: DataResponse<Any>) in
+			
+			print(response)
+			
+			guard let pulseResponse = response.result.value as? PulseData else {
+				completion(PulseResults(error: PulseNetworkError.InvalidResponse, result: nil))
+				return
+			}
+			
+			completion(PulseResults(error: nil, result: pulseResponse))
+			
+		}
+		
+	}
+	
 }
