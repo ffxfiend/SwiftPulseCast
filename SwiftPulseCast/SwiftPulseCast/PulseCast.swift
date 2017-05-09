@@ -95,10 +95,10 @@ public class PulseCast {
 			"location": coordinates.toString(),
 			"verbose": verbose ? "true" : "false",
 			"cultureInfo": cultureInfo,
-			"units": units,
-			"ruledetails": ruledetails ? "true" : "false",
-			"metadata": metadata ? "true" : "false",
-			"includeqcflags": includeqcflags ? "true" : "false"
+			"units": unit.rawValue,
+			"ruledetails": ruleDetails ? "true" : "false",
+			"metadata": metaData ? "true" : "false",
+			"includeqcflags": includeQCFlags ? "true" : "false"
 		]
 		
 		let headers : HTTPHeaders = [
